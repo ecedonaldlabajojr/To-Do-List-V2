@@ -10,7 +10,9 @@ const mongoose = require("mongoose"); // Mongoose module
 const {
   result
 } = require("lodash");
-mongoose.connect("mongodb://localhost:27017/todolistDBv2"); // Connect to a mongoDB database named todolistDBv2
+mongoose.connect("mongodb+srv://admin-dondon28:2010018995@cluster0.loiov.mongodb.net/todolistDB", {
+  useNewUrlParser: true
+}); // Connect to a mongoDB database named todolistDB
 
 const app = express();
 
@@ -187,7 +189,7 @@ app.get('/:newRoute', (req, res) => {
 
 
 //########################## Listen to port 3000 ##########################
-
-app.listen(3000, function () {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, function () {
   console.log("Server started on port 3000");
 });
