@@ -10,9 +10,7 @@ const mongoose = require("mongoose"); // Mongoose module
 const {
   result
 } = require("lodash");
-mongoose.connect("mongodb+srv://admin-dondon28:2010018995@cluster0.loiov.mongodb.net/todolistDB", {
-  useNewUrlParser: true
-}); // Connect to a mongoDB database named todolistDB
+mongoose.connect("mongodb+srv://admin-dondon28:2010018995@cluster0.loiov.mongodb.net/todolistDB"); // Connect to a mongoDB database named todolistDB
 
 const app = express();
 
